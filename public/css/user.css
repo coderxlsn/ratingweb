@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+
+#cap {
+	visibility: hidden;
+}
+#cap-input {
+	 background: none repeat scroll 0 0 #f2f2f3;
+    border: 1px solid #e3e4e8;
+    float: left;
+    font-size: 14px;
+    height: 48px;
+    margin-left: 30px;
+    padding-left: 10px;
+    width: 190px;
+
+}
+.bottom_reg > img {
+	border: 1px solid #e3e4e8;
+    float: left;
+    height: 48px;
+    margin-right: 20px;
+    width: 250px;
+}

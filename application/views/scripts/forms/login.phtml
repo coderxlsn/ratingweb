@@ -1,0 +1,19 @@
+
+					<div class="login_with_acc left">
+					<form id="loginWidtAccLeft" action="<?= $this->element->getAction(); ?>"   method="<?= $this->element->getMethod(); ?>">
+						<div class="row1">
+							<?php echo $this->element->getElement('login')?><i class="l_form_icon" style="background-position: -3px -20px;"></i>
+						</div><br>
+						<div class="row1">
+							<?php echo $this->element->getElement('pass')?><i class="l_form_icon" style="background-position: -3px 0px;"></i>
+						</div><br>
+						<div class="forgot_pass_div left">
+							<span style="color: #5e5b5b; font-size: 13px; font-family: os_bold;"><?php echo $this->translate('Lost Your Password?')?></span><br>
+							<?php echo $this->element->getElement('remember')?>
+							<label for="remember" class="rem_me"><?php echo $this->translate('Remember Me')?></label>
+						</div>
+						<button class="btn3"><i></i><?php echo $this->translate('Send')?></button>
+						<div class="both"></div>
+						</form>
+					</div>
+					

@@ -1,0 +1,23 @@
+<form  action="<?= $this->element->getAction(); ?>"   method="<?= $this->element->getMethod(); ?>">
+	<fieldset id="website_add_form">
+						<span class="form_row">
+							<label for="website_name" class="label_form">Website name</label>
+							<?php echo $this->element->getElement('name')?>
+						</span>
+						<span class="form_row">
+							<label for="website_url" class="label_form">Website Url</label>
+							<?php echo $this->element->getElement('url')?>
+						</span>
+						<span class="form_row">
+							<label for="keyword" class="label_form">Keywords</label>
+							<?php echo $this->element->getElement('keyword')?>
+						</span>
+						<span class="form_row">
+							<label for="website_desc" class="label_form">Description</label>
+						</span>
+							<?php echo $this->element->getElement('description')?>
+							<br>
+							<button type="submit" class="save"><i></i>Save</button>					
+					</fieldset>
+</form>
+					

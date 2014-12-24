@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/user.css">
+	<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.form.js"></script>
+	<script type="text/javascript" src="/js/colorpicker.js"></script> 
+	<script type="text/javascript" src="/js/main.js"></script>
+	
+	<script type="text/javascript" src="/js/user.js"></script>
+	<script type="text/javascript" src="/js/search.js"></script>
+	<!--[if lt IE 7]>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script>
+	<![endif]-->
+	<!--[if lt IE 8]>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+	<![endif]-->
+	<!--[if IE]> 
+   	 <link rel="stylesheet" type="text/css" href="/css/ie.css" />
+    <![endif]-->
+		<?php echo $this->headTitle();echo "\n"; ?>
+	<?php echo $this->headMeta();echo "\n"; ?>
+	<?php echo $this->headScript();echo "\n"; ?>
+	<?php echo $this->headStyle();echo "\n"; ?>
+	<?php echo $this->headLink();echo "\n"; ?>
+</head>
+<div id="overlay1"></div>
+	<header id="header">
+		<div class="w1100">
+			<a href="/" class="left">
+				<span class="logo"></span>
+			</a>
+			<div class="languages">
+				<ul>
+					<li class="lang_gr"><a href="#"></a></li>
+					<li class="lang_bg"><a href="#"></a></li>
+					<li class="lang_ru"><a href="#"></a></li>
+					<li class="lang_en"><a href="#"></a></li>
+					<li class="lang_gr"><a href="#"></a></li>
+					<li class="lang_bg"><a href="#"></a></li>
+					<li class="lang_ru"><a href="#"></a></li>
+					<li class="lang_en"><a href="#"></a></li>
+				</ul>
+			</div>
+			<?php echo $this->authUser();?>
+			
+		</div>
+		<div class="both"></div>
+		<?php $auth = Zend_Auth::getInstance();
+		if (!$auth->hasIdentity()) {
+			echo $this->register();
+			echo $this->login();
+			}
+		?>
+			
+				</header>
+
+	<div class="both"></div>
+
+	<div class="w1100">
+				
+	<?php echo $this->layout()->content; ?>
+	<div class="both"></div>
+	
+</div>
+	<footer id="footer" class="clearfix">
+		<div class="w1100">
+			<div class="f_blocks">
+				<div class="f_block">
+					<h3> Phasellus Purus <br>Adipiscing In</h3>
+					<ul>
+						<li><a href="#">Nullam "furniture"</a></li>
+						<li><a href="#">Contrast</a></li>
+						<li><a href="#">Press center</a></li>
+						<li><a href="#">Aenean suscipit</a></li>
+						<li><a href="#">Pellentesque</a></li>
+						<li><a href="#">Duis lobortis augue</a></li>
+						<li><a href="#">Mollis hendrerit</a></li>
+					</ul>
+				</div>
+				<div class="f_block">
+					<h3> Phasellus Purus <br>Adipiscing In</h3>
+					<ul>
+						<li><a href="#">Nullam "furniture"</a></li>
+						<li><a href="#">Contrast</a></li>
+						<li><a href="#">Press center</a></li>
+						<li><a href="#">Aenean suscipit</a></li>
+						<li><a href="#">Pellentesque</a></li>
+						<li><a href="#">Duis lobortis augue</a></li>
+						<li><a href="#">Mollis hendrerit</a></li>
+						<li><a href="#">Nullam "furniture"</a></li>
+						<li><a href="#">Contrast</a></li>
+					</ul>
+				</div>
+				<div class="f_block">
+					<h3> Phasellus Purus <br>Adipiscing In</h3>
+					<ul>
+						<li><a href="#">Nullam "furniture"</a></li>
+						<li><a href="#">Contrast</a></li>
+						<li><a href="#">Press center</a></li>
+						<li><a href="#">Aenean suscipit</a></li>
+						<li><a href="#">Pellentesque</a></li>
+						<li><a href="#">Duis lobortis augue</a></li>
+						<li><a href="#">Mollis hendrerit</a></li>
+					</ul>
+				</div>
+				<div class="f_block f_contacts">
+					<h3>Contacts Us:</h3>
+					<input type="text" name="f_c_name" placeholder="Name"><input type="text" name="f_c_lname" placeholder="Last Name"><br>
+					<input type="text" name="f_c_email" placeholder="Email"><input type="text" name="f_c_phone" placeholder="Phone"><br>
+					<textarea name="f_c_message"  placeholder="Message"></textarea><br>
+					<div class="captha_img2"></div><input type="text" class="captha_text2"><button class="btn1" style="margin-top: 0">SEND</button>
+				</div>
+			</div>
+			<div class="both"></div>
+			
+		</div>
+	</footer>
+	<div id="f_bottom">
+		<div class="w1100">
+			<ul class="bottom_nav">
+				<li><a href="#">INDEX PAGE</a></li>
+				<li><a href="#">WHO WE ARE</a></li>
+				<li><a href="#">WHAT WE DO</a></li>
+				<li><a href="#">CONTACT US</a></li>
+			</ul>
+			<div class="right" >
+				<ul class="bottom_socials">
+					<li style="background-position: 0 -75px;"><a href="#"></a></li>
+					<li style="background-position: -33px -77px;"><a href="#"></a></li>
+					<li style="background-position: -73px -75px;"><a href="#"></a></li>
+					<li style="background-position: -108px -75px;"><a href="#"></a></li>
+					<li style="background-position: -146px -75px;"><a href="#"></a></li>
+					<li style="background-position: -187px -74px;"><a href="#"></a></li>
+				</ul>
+				<span class="copyright">© 2014 Exnet Hellas</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+	

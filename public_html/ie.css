@@ -1,0 +1,23 @@
+@font-face {
+	src: url(/fonts/os.eot);
+	font-family: os;
+}
+@font-face {
+	src: url(/fonts/os-bold.eot);
+	font-family: os_bold;
+}
+.both {
+	height: 0;
+}
+textarea { 
+	overflow: auto; 
+}
+#header {
+	margin-top: 0;
+}
+#footer {
+	margin-bottom: -10px;
+}
+input[name="f_c_name"],[name="f_c_name"],[name="f_c_name"],[name="f_c_name"] {
+	padding-top: 5px;
+}

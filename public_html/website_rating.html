@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/search.js"></script>
+		<script src="js/colorpicker.js"></script>
+		<script src="js/site_rating.js"></script>
+	<!--[if lt IE 7]>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script>
+	<![endif]-->
+	<!--[if lt IE 8]>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+	<![endif]-->
+	<!--[if IE]> 
+   	 <link rel="stylesheet" type="text/css" href="css/ie.css" />
+    <![endif]-->
+	<title>Add site</title>
+</head>
+<body>
+<div id="overlay1"></div>
+	<header id="header">
+		<div class="w1100">
+			<a href="/" class="left">
+				<div class="logo"></div>
+			</a>
+			<div class="languages">
+				<ul>
+					<li class="lang_gr"><a href="#"></a></li>
+					<li class="lang_bg"><a href="#"></a></li>
+					<li class="lang_ru"><a href="#"></a></li>
+					<li class="lang_en"><a href="#"></a></li>
+					<li class="lang_gr"><a href="#"></a></li>
+					<li class="lang_bg"><a href="#"></a></li>
+					<li class="lang_ru"><a href="#"></a></li>
+					<li class="lang_en"><a href="#"></a></li>
+				</ul>
+			</div>
+			<div class="login-menu authed_user">
+				<ul>
+					<li class="btn-login"></li>
+					<li class="authed_user_text">Hello, Katerina Kainourgiou</li>
+				</ul>
+			</div>
+		</div>
+		<div class="both"></div>
+	
+	<div class="popup-login" id="popup-reg">
+				<div class="form_title">
+					<i></i><h2>User Login</h2><i class="f_close"></i>
+				</div>
+				<span class="text4">* Required fields</span>
+				<div class="login_form">
+						<div class="row2">
+							<input type="text" class="form_input2" name="reg_name" placeholder="Name *"><i style="background-position: -2px -20px;"></i>
+						</div>
+						<div class="row2 right">
+							<input type="text" class="form_input2" name="reg_username" placeholder="Username *"><i style="background-position: -2px -20px;"></i>
+						</div>
+						<div class="row2">
+							<input type="password" class="form_input2" name="reg_password" placeholder="Password *"><i style="background-position: -2px -1px;"></i>
+						</div>
+						<div class="row2 right">
+							<input type="password" class="form_input2" name="reg_c_password" placeholder="Confirm Password *"><i  style="background-position: -2px -1px;"></i>
+						</div>
+						<div class="row2">
+							<input type="text" class="form_input2" name="reg_email" placeholder="Email *"><i style="background-position: -2px -39px;"></i>
+						</div>
+						<div class="row2 right">
+							<input type="text" class="form_input2" name="reg_c_email" placeholder="Confirm Email *"><i style="background-position: -2px -39px;"></i>
+						</div>
+						<div class="both"></div>
+						<div class="bottom_reg">
+							<div class="captha_img"></div><input type="text"  placeholder="Insert Password" class="captha_text"><i></i><button class="btn3" style="margin-right: 0 !important; margin-top: 0 !important"><i></i>Register</button>
+						</div>
+				</div>
+			</div>
+			<div class="popup-login" id="popup-login">
+				
+				<div class="form_title">
+					<i></i><h2>User Login</h2><i class="f_close"></i>
+				</div>
+				<div class="login_form">
+					<div class="login_with_acc left">
+						<div class="row1">
+							<input type="text" class="form_input" name="login_input" placeholder="Username"><i class="l_form_icon" style="background-position: -3px -20px;"></i>
+						</div><br>
+						<div class="row1">
+							<input type="password" class="form_input" name="pass_input" placeholder="Password"><i class="l_form_icon" style="background-position: -3px 0px;"></i>
+						</div><br>
+						<div class="forgot_pass_div left">
+							<span style="color: #5e5b5b; font-size: 13px; font-family: os_bold;">Lost Your Password?</span><br>
+							<input type="checkbox" id="remember_me" class="remember_me" hidden><label for="remember_me" class="rem_me">Remember Me</label>
+						</div>
+						<button class="btn3"><i></i>Send</button>
+						<div class="both"></div>
+					</div>
+					<div class="login_with_socials right">
+						<ul>
+							<li class="btn2 soc_vk_btn">Войти с Вконтакте <i class="soc_vk_ico"></i></li>
+							<li class="btn2 soc_fb_btn">Войти с facebook <i class="soc_fb_ico"></i></li>
+							<li class="btn2 soc_tw_btn">Войти с twitter <i class="soc_tw_ico"></i></li>
+							<li class="btn2 soc_gl_btn">Войти с google <i class="soc_gl_ico"></i></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	</header>
+
+	<div class="w1100">
+		<section id="content">
+				<fieldset id="search">
+					<input type="text" placeholder="Search for a website" class="search_field"><span class="search-icon"></span>
+				</fieldset>
+				<div class="search-example">eg. www.exnethellas.gr</div>
+
+				<div id="search-results">
+					<div class="no-results">
+						<span>There is no such website. Do you want to add website?</span>
+						<span><a href="#">Add</a>new website</span>
+					</div>
+				</div>
+
+				<ul class="breadcrumbs">
+					<li>
+						Index
+					</li>
+					<li class="angle-right"></li>
+					<li>Website Rating</li>
+				</ul>
+
+				<div class="wrapper">
+					<div class="site_pr_head">
+						<h1>Modern Furniture Hellas</h1><i class="site_nt site_nt_gr"></i>
+					</div>
+					<div class="both"></div>
+					<div class="site_pr_image">
+						
+					</div>
+					<div class="site_pr_desc">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi . <br>
+							<a href="#">Details</a>
+						</p>
+					</div>
+					<div class="site_circ_rating">
+						<canvas id="site_rating" width="165" height="165" data-completeness="7.6"></canvas> 
+					</div>
+					<div class="both"></div>
+				</div>
+
+				<div class="form_title2">
+					<i></i>
+					<h2>WEBSITE RATING</h2>	
+				</div>
+
+				<div class="wrapper" style="background: #efefe5; border: 0; padding-top: 10px;">
+					<div class="row3">
+						<span class="web_rate_position">1</span>
+						<span class="web_rate_url">
+							<a href="#">Delay on delivery</a>
+						</span>
+					</div>
+					<div class="row3-content">
+						<label class="label_checkbox" for="days_delivery">DAYS</label><input type="text" class="input2" maxlength="3" id="days_delivery">
+						<div class="both"></div>
+					</div>
+
+					<div class="row3">
+						<span class="web_rate_position">2</span>
+						<span class="web_rate_url">
+							<a href="#">Response time by phone</a>
+						</span>
+					</div>
+					<div class="row3-content">
+						<label for="sec" class="label_checkbox">SEC</label>
+						<input id="sec" class="input2" maxlength="3" type="text"/>
+					    
+						<label for="min" class="label_checkbox">MIN</label>
+						<input id="min"  class="input2" maxlength="3" type="text"/>
+					    
+						<label for="days" class="label_checkbox">DAYS</label>
+					    <input id="days" class="input2" maxlength="3" type="text"/>
+					    					   
+						<div class="both"></div>
+					</div>
+
+					<div class="row3">
+						<span class="web_rate_position">3</span>
+						<span class="web_rate_url" style="width: auto">
+							<a href="#">Would you recommended to another this e-shop</a>
+						</span>
+					</div>
+					<div class="row3-content">
+						<input type="text" class="rec_to_shop" placeholder="Type your answer here..." name="rec_to_shop">
+					</div>
+
+					<div class="row3">
+						<span class="web_rate_position">4</span>
+						<span class="web_rate_url">
+							<a href="#">Helpfulness of staff uppon request</a>
+						</span>
+					</div>
+					<div class="row3-content">
+						<input id="h_yes" class="checkbox" type="checkbox" name="checkbox" hidden/>
+					    <label for="h_yes" class="label_checkbox">YES</label>
+						
+						<input id="h_no" class="checkbox" type="checkbox" name="checkbox" hidden/>
+					    <label for="h_no" class="label_checkbox">NO</label>
+					</div>
+
+					<div class="row3">
+						<span class="web_rate_position">5</span>
+						<span class="web_rate_url">
+							<a href="#">Response time to email</a>
+						</span>
+					</div>
+					<div class="row3-content">
+						<input id="rt_vg" class="radio" type="radio" name="radio" hidden checked/>
+					    <label for="rt_vg" class="label_checkbox">VERY GOOD</label>
+						
+						<input id="rt_g" class="radio" type="radio" name="radio" hidden/>
+					    <label for="rt_g" class="label_checkbox">GOOD</label>
+
+					    <input id="rt_b" class="radio" type="radio" name="radio" hidden/>
+					    <label for="rt_b" class="label_checkbox">BAD</label>
+						
+						<input id="rt_vb" class="radio" type="radio" name="radio" hidden/>
+					    <label for="rt_vb" class="label_checkbox">VERY BAD</label>
+
+					</div>
+
+					<div class="row3">
+						<span class="web_rate_position">6</span>
+						<span class="web_rate_url">
+							<a href="#">Quality information via email</a>
+						</span>
+					</div>
+					<div class="row3-content">
+						<span style="font-size: 18px;float:left;margin-top:10px;font-weight:bold;color:#747372;">What rate will you give from 1 to 10? Type your rate in the box</span><input type="text" class="input2" maxlength="2" name="site_rate">
+					</div>
+
+					<div class="row3">
+						<span class="web_rate_position">7</span>
+						<span class="web_rate_url" style="width: auto">
+							<a href="/">How easy did you find the product you wish in the site</a>
+						</span>
+					</div>
+					<div class="row3-content">
+						<input id="he_yes" class="checkbox" type="checkbox" name="checkbox" hidden/>
+					    <label for="he_yes" class="label_checkbox">YES</label>
+						
+						<input id="he_no" class="checkbox" type="checkbox" name="checkbox" hidden/>
+					    <label for="he_no" class="label_checkbox">NO</label>
+
+					    <input id="he_maybe" class="checkbox" type="checkbox" name="checkbox" hidden/>
+					    <label for="he_maybe" class="label_checkbox">MAYBE</label>
+
+					</div>
+				</div>
+
+				<div class="wrapper">
+					<div class="form_title">
+						<i style="background-position: -73px -1px;"></i><h2>Add New Comment</h2>
+					</div>
+					<div class="comment-text">
+						<textarea name="new_comment" placeholder="Reply..."></textarea>
+						<button class="btn4"><i></i>Submit</button>
+					</div>
+					<div class="both"></div>
+				</div>
+				
+				<button class="save_rating">SAVE RATING</button>
+				<div class="notice">
+					<div class="n_top">
+						<i class="n_error_icon"></i><div class="n_error_text">This website is already added</div><i class="n_close"></i>
+					</div>
+					<div class="n_content">
+						Do you want to add rating for this site?
+					</div>
+					<div class="n_bottom">
+						<span>Click</span><a href="#">here</a>
+					</div>
+				</div>
+		</section>	
+
+		<aside id="right-column">
+			<div id="add-site-btn">
+				<button class="add-site-btn">Add new Website</button><span class="add-icon"></span>
+			</div>
+			<div id="ad_block1">BANNER</div>
+			<div id="ad_block2">BANNER</div>
+			<div id="ad_block3">BANNER</div>
+			<div id="ad_block4">BANNER</div>
+		</aside>
+		<div class="both"></div>
+	</div>
+	<div class="both"></div>
+	
+
+	<footer id="footer" class="clearfix">
+		<div class="w1100">
+			<div class="f_blocks">
+				<div class="f_block">
+					<h3> Phasellus Purus <br>Adipiscing In</h3>
+					<ul>
+						<li><a href="#">Nullam "furniture"</a></li>
+						<li><a href="#">Contrast</a></li>
+						<li><a href="#">Press center</a></li>
+						<li><a href="#">Aenean suscipit</a></li>
+						<li><a href="#">Pellentesque</a></li>
+						<li><a href="#">Duis lobortis augue</a></li>
+						<li><a href="#">Mollis hendrerit</a></li>
+					</ul>
+				</div>
+				<div class="f_block">
+					<h3> Phasellus Purus <br>Adipiscing In</h3>
+					<ul>
+						<li><a href="#">Nullam "furniture"</a></li>
+						<li><a href="#">Contrast</a></li>
+						<li><a href="#">Press center</a></li>
+						<li><a href="#">Aenean suscipit</a></li>
+						<li><a href="#">Pellentesque</a></li>
+						<li><a href="#">Duis lobortis augue</a></li>
+						<li><a href="#">Mollis hendrerit</a></li>
+						<li><a href="#">Nullam "furniture"</a></li>
+						<li><a href="#">Contrast</a></li>
+					</ul>
+				</div>
+				<div class="f_block">
+					<h3> Phasellus Purus <br>Adipiscing In</h3>
+					<ul>
+						<li><a href="#">Nullam "furniture"</a></li>
+						<li><a href="#">Contrast</a></li>
+						<li><a href="#">Press center</a></li>
+						<li><a href="#">Aenean suscipit</a></li>
+						<li><a href="#">Pellentesque</a></li>
+						<li><a href="#">Duis lobortis augue</a></li>
+						<li><a href="#">Mollis hendrerit</a></li>
+					</ul>
+				</div>
+				<div class="f_block f_contacts">
+					<h3>Contacts Us:</h3>
+					<input type="text" name="f_c_name" placeholder="Name"><input type="text" name="f_c_lname" placeholder="Last Name"><br>
+					<input type="text" name="f_c_email" placeholder="Email"><input type="text" name="f_c_phone" placeholder="Phone"><br>
+					<textarea name="f_c_message"  placeholder="Message"></textarea><br>
+					<div class="captha_img2"></div><input type="text" class="captha_text2"><button class="btn1" style="margin-top: 0">SEND</button>
+				</div>
+			</div>
+			<div class="both"></div>
+			
+		</div>
+	</footer>
+	<div id="f_bottom">
+		<div class="w1100">
+			<ul class="bottom_nav">
+				<li><a href="#">INDEX PAGE</a></li>
+				<li><a href="#">WHO WE ARE</a></li>
+				<li><a href="#">WHAT WE DO</a></li>
+				<li><a href="#">CONTACT US</a></li>
+			</ul>
+			<div class="right" >
+				<ul class="bottom_socials">
+					<li style="background-position: 0 -75px;"><a href="#"></a></li>
+					<li style="background-position: -33px -77px;"><a href="#"></a></li>
+					<li style="background-position: -73px -75px;"><a href="#"></a></li>
+					<li style="background-position: -108px -75px;"><a href="#"></a></li>
+					<li style="background-position: -146px -75px;"><a href="#"></a></li>
+					<li style="background-position: -187px -74px;"><a href="#"></a></li>
+				</ul>
+				<span class="copyright">© 2014 Exnet Hellas</span>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	$(document).ready(function(){
+		$('.web_rate_url a').click(function(e){
+			e.preventDefault();
+		});
+
+		$('.checkbox').click(function(){
+				$(this).next('.checkbox_olay').toggleClass(' checked');
+		});
+	})
+</script>
+</html>

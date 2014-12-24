@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/colorpicker.css" />
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/site_rating.js"></script>
+		<script type="text/javascript" src="js/colorpicker.js"></script>
+
+	<!--[if lt IE 7]>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script>
+	<![endif]-->
+	<!--[if lt IE 8]>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+	<![endif]-->
+	<!--[if IE]> 
+   	 <link rel="stylesheet" type="text/css" href="css/ie.css" />
+    <![endif]-->
+	<title>Add site</title>
+</head>
+<body>
+<div id="overlay1"></div>
+	<header id="header">
+		<div class="w1100">
+			<a href="/" class="left">
+				<div class="logo"></div>
+			</a>
+			<div class="languages">
+				<ul>
+					<li class="lang_gr"><a href="#"></a></li>
+					<li class="lang_bg"><a href="#"></a></li>
+					<li class="lang_ru"><a href="#"></a></li>
+					<li class="lang_en"><a href="#"></a></li>
+					<li class="lang_gr"><a href="#"></a></li>
+					<li class="lang_bg"><a href="#"></a></li>
+					<li class="lang_ru"><a href="#"></a></li>
+					<li class="lang_en"><a href="#"></a></li>
+				</ul>
+			</div>
+			<div class="login-menu">
+				<ul>
+					<li class="btn-login l_f1"></li>
+					<li class="text-login l_f1">Login</li>
+					<li class="btn-reg l_f2"></li>
+					<li class="text-reg l_f2">Register</li>
+				</ul>
+			</div>
+		</div>
+		<div class="both"></div>
+	
+	<div class="popup-login" id="popup-reg">
+				<div class="form_title">
+					<i></i><h2>User Login</h2><i class="f_close"></i>
+				</div>
+				<span class="text4">* Required fields</span>
+				<div class="login_form">
+						<div class="row2">
+							<input type="text" class="form_input2" name="reg_name" placeholder="Name *"><i style="background-position: -2px -20px;"></i>
+						</div>
+						<div class="row2 right">
+							<input type="text" class="form_input2" name="reg_username" placeholder="Username *"><i style="background-position: -2px -20px;"></i>
+						</div>
+						<div class="row2">
+							<input type="password" class="form_input2" name="reg_password" placeholder="Password *"><i style="background-position: -2px -1px;"></i>
+						</div>
+						<div class="row2 right">
+							<input type="password" class="form_input2" name="reg_c_password" placeholder="Confirm Password *"><i  style="background-position: -2px -1px;"></i>
+						</div>
+						<div class="row2">
+							<input type="text" class="form_input2" name="reg_email" placeholder="Email *"><i style="background-position: -2px -39px;"></i>
+						</div>
+						<div class="row2 right">
+							<input type="text" class="form_input2" name="reg_c_email" placeholder="Confirm Email *"><i style="background-position: -2px -39px;"></i>
+						</div>
+						<div class="both"></div>
+						<div class="bottom_reg">
+							<div class="captha_img"></div><input type="text"  placeholder="Insert Password" class="captha_text"><i></i><button class="btn3" style="margin-right: 0 !important; margin-top: 0 !important;"><i></i>Register</button>
+						</div>
+				</div>
+			</div>
+			<div class="popup-login" id="popup-login">
+				
+				<div class="form_title">
+					<i></i><h2>User Login</h2><i class="f_close"></i>
+				</div>
+				<div class="login_form">
+					<div class="login_with_acc left">
+						<div class="row1">
+							<input type="text" class="form_input" name="login_input" placeholder="Username"><i class="l_form_icon" style="background-position: -3px -20px;"></i>
+						</div><br>
+						<div class="row1">
+							<input type="password" class="form_input" name="pass_input" placeholder="Password"><i class="l_form_icon" style="background-position: -3px 0px;"></i>
+						</div><br>
+						<div class="forgot_pass_div left">
+							<span style="color: #5e5b5b; font-size: 13px; font-family: os_bold;">Lost Your Password?</span><br>
+							<input type="checkbox" id="remember_me" class="remember_me" hidden><label for="remember_me" class="rem_me">Remember Me</label>
+						</div>
+						<button class="btn3"><i></i>Send</button>
+						<div class="both"></div>
+					</div>
+					<div class="login_with_socials right">
+						<ul>
+							<li class="btn2" style="background-position: -3px -192px;"></li>
+							<li class="btn2" style="background-position: -3px -238px;"></li>
+							<li class="btn2" style="background-position: -3px -286px;"></li>
+							<li class="btn2" style="background-position: -3px -333px;"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	</header>
+
+	<div class="w1100">
+		<section id="content">
+				<fieldset id="search">
+					<input type="text" placeholder="Search for a website" class="search_field"><span class="search-icon"></span>
+				</fieldset>
+				<div class="search-example">eg. www.exnethellas.gr</div>
+
+				<div id="search-results">
+					<div class="no-results">
+						<span>There is no such website. Do you want to add website?</span>
+						<span><a href="#">Add</a>new website</span>
+					</div>
+				</div>
+
+				<ul class="breadcrumbs">
+					<li>
+						Index
+					</li>
+					<li class="angle-right"></li>
+					<li>Website Rating</li>
+				</ul>
+
+				<div class="wrapper">
+					<div class="site_pr_head">
+						<h1>Modern Furniture Hellas</h1><i class="site_nt site_nt_gr"></i>
+					</div>
+					<div class="both"></div>
+					<div class="site_pr_image">
+						
+					</div>
+					<div class="site_pr_desc">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi . <br>
+							<a href="#">Details</a>
+						</p>
+					</div>
+					<div class="site_circ_rating">
+						<canvas id="site_rating" width="165" height="165" data-completeness="7.6"></canvas> 
+					</div>
+					<div class="both"></div>
+				</div>
+
+				<div class="form_title2">
+					<i></i>
+					<h2>WEBSITE CHARACTERISTICS</h2>	
+				</div>
+
+				<div class="wrapper" style="background: #efefe5; border: 0; padding-top: 10px; border-radius: 0;">
+					<div class="row3">
+						<span class="web_rate_position">
+							<input type="checkbox" class="checkbox2"><span class="checkbox_olay2"></span>
+						</span>
+						<span class="web_rate_url">
+							<a href="#">Delay on delivery</a>
+						</span>
+						<div class="right">
+							<div class="web_wrate">
+								<div class="web_wrating" style="width: 78%;"></div>
+							</div>
+							<span class="web_rate_p2">7.8</span>
+						</div>
+					</div>
+					
+					<div class="row3">
+						<span class="web_rate_position">
+							<input type="checkbox" class="checkbox2"><span class="checkbox_olay2"></span>
+						</span>
+						<span class="web_rate_url">
+							<a href="#">Response time to email</a>
+						</span>
+						<div class="right">
+							<div class="web_wrate">
+								<div class="web_wrating" style="width: 83%;"></div>
+							</div>
+							<span class="web_rate_p2">8.3</span>
+						</div>
+					</div>
+
+					<div class="row3">
+						<span class="web_rate_position">
+							<input type="checkbox" class="checkbox checkbox2"><span class="checkbox_olay2"></span>
+						</span>
+						<span class="web_rate_url">
+							<a href="#">Response time by phone</a>
+						</span>
+						<div class="right">
+							<div class="web_wrate">
+								<div class="web_wrating" style="width: 91%;"></div>
+							</div>
+							<span class="web_rate_p2">9.1</span>
+						</div>
+					</div>
+
+					<div class="row3">
+						<span class="web_rate_position">
+							<input type="checkbox" class="checkbox checkbox2"><span class="checkbox_olay2"></span>
+						</span>
+						<span class="web_rate_url">
+							<a href="#">Helpfulness of staff uppon request</a>
+						</span>
+						<div class="right">
+							<div class="web_wrate">
+								<div class="web_wrating" style="width: 57%;"></div>
+							</div>
+							<span class="web_rate_p2">5.7</span>
+						</div>
+					</div>
+
+					<div class="row3">
+						<span class="web_rate_position">
+							<input type="checkbox" class="checkbox checkbox2"><span class="checkbox_olay2"></span>
+						</span>
+						<span class="web_rate_url">
+							<a href="#">Quality information via email</a>
+						</span>
+						<div class="right">
+							<div class="web_wrate">
+								<div class="web_wrating" style="width: 63%;"></div>
+							</div>
+							<span class="web_rate_p2">6.3</span>
+						</div>
+					</div>
+
+					<div class="row3">
+						<span class="web_rate_position">
+							<input type="checkbox" class="checkbox checkbox2"><span class="checkbox_olay2"></span>
+						</span>
+						<span class="web_rate_url">
+							<a href="#">Quality information by phone</a>
+						</span>
+						<div class="right">
+							<div class="web_wrate">
+								<div class="web_wrating" style="width: 58%;"></div>
+							</div>
+							<span class="web_rate_p2">5.8</span>
+						</div>
+					</div>
+
+					<div class="row3">
+						<span class="web_rate_position">
+							<input type="checkbox" class="checkbox checkbox2"><span class="checkbox_olay2"></span>
+						</span>
+						<span class="web_rate_url" style="width: auto">
+							<a href="#">How easy did you find the product you wish in the site</a>
+						</span>
+						<div class="right">
+							<div class="web_wrate">
+								<div class="web_wrating" style="width: 69%;"></div>
+							</div>
+							<span class="web_rate_p2">6.9</span>
+						</div>
+					</div>
+
+					<div class="row3">
+						<span class="web_rate_position">
+							<input type="checkbox" class="checkbox checkbox2"><span class="checkbox_olay2"></span>
+						</span>
+						<span class="web_rate_url" style="width: auto">
+							<a href="#">Would you recommended to another this e-shop</a>
+						</span>
+						<div class="right">
+							<div class="web_wrate">
+								<div class="web_wrating" style="width: 65%;"></div>
+							</div>
+							<span class="web_rate_p2">6.5</span>
+						</div>
+					</div>
+
+					<div class="row3">
+						<span class="web_rate_position">
+							<input type="checkbox" class="checkbox checkbox2"><span class="checkbox_olay2"></span>
+						</span>
+						<span class="web_rate_url">
+							<a href="#">Wil buy again from this page</a>
+						</span>
+						<div class="right">
+							<div class="web_wrate">
+								<div class="web_wrating" style="width: 93%;"></div>
+							</div>
+							<span class="web_rate_p2">9.3</span>
+						</div>
+					</div>
+
+					<div class="row3">
+						<span class="web_rate_position">
+							<input type="checkbox" class="checkbox checkbox2"><span class="checkbox_olay2"></span>
+						</span>
+						<span class="web_rate_url">
+							<a href="#">Quality information via email</a>
+						</span>
+						<div class="right">
+							<div class="web_wrate">
+								<div class="web_wrating" style="width: 87%;"></div>
+							</div>
+							<span class="web_rate_p2">8.7</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="form_title2">
+					<i></i>
+					<h2>COMMENTS</h2>	
+				</div>
+				<div class="wrapper" style="background: #efefe5; border: 0; border-radius: 0;">
+
+					<div id="comment-parent">
+						<div class="comment-date">12/06/2014, 14:08</div>
+						<div class="comment-content">
+							<div class="comment_user_image">
+								<img src="images/girl.png" alt="">
+							</div>
+							<div class="comment_text">
+								<span class="comment_user_name">COMMENT by Owner:</span>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoquis nostrud
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="both"></div>
+
+					<div id="comment-children">
+						<div class="comment-date">12/06/2014, 14:08</div>
+						<div class="comment-content">
+							<div class="comment_user_image">
+								<img src="images/girl.png" alt="">
+							</div>
+							<div class="comment_text">
+								<span class="comment_user_name">ANSWER by Owner:</span>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoquis nostrud
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="both"></div>
+
+					<div id="comment-parent">
+						<div class="comment-date">12/06/2014, 14:08</div>
+						<div class="comment-content">
+							<div class="comment_user_image">
+								<img src="images/girl.png" alt="">
+							</div>
+							<div class="comment_text">
+								<span class="comment_user_name">COMMENT by Owner:</span>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoquis nostrud
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="both"></div>
+
+					<div id="comment-children">
+						<div class="comment-date">12/06/2014, 14:08</div>
+						<div class="comment-content">
+							<div class="comment_user_image">
+								<img src="images/girl.png" alt="">
+							</div>
+							<div class="comment_text">
+								<span class="comment_user_name">ANSWER by Owner:</span>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoquis nostrud
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="both"></div>
+
+							<div class="panag">
+								<ul>
+									<li class="prev_page_btn"><a href="#"></a></li>
+									<li><a href="#" class="page_link cur_page">1</a></li>
+									<li><a href="#" class="page_link">2</a></li>
+									<li><a href="#" class="page_link">3</a></li>
+									<li><a href="#" class="page_link">4</a></li>
+									<li><a href="#" class="page_link">5</a></li>
+									<li class="next_page_btn"><a href="#"></a></li>
+									<li><a href="#" class="goto_link">Go to</a></li>
+									<li><input type="text" class="goto_xpage" value="5" maxlength="3"></li>
+									<li><a href="#" class="prev_page_link">PREVIOUS PAGE</a></li>
+									<li><a href="#" class="next_page_link">NEXT PAGE</a></li>
+								</ul>
+							</div>	
+
+					<div class="wrapper" style="background: #fff;width: 745px;margin: 40px auto;">
+						<div class="form_title">
+							<i style="background-position: -73px -1px;"></i><h2>Add New Comment</h2>
+						</div>
+						<div class="comment-text">
+							<textarea name="new_comment" placeholder="Reply..." style="background: #efefe5; width: 723px"></textarea>
+							<button class="btn4" style="width: 720px"><i></i>Submit</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="iframe_options">
+					<p class="text11">Do you want General Rating of this website play into your website? Edit the settings below and then copy the following code to your website.</p>
+
+					<h4>LANGUAGE</h4>
+					<ul>
+						<li>
+					        <input id="I_lang_gr" class="radio3" type="radio" name="radio3" checked hidden/>
+					        <label for="I_lang_gr">Greek</label>
+					    </li>
+					    <li>
+					        <input id="i_lang_en" class="radio3" type="radio" name="radio3" hidden/>
+					        <label for="i_lang_en">English</label>
+					    </li>
+					    <li>
+					        <input id="i_lang_ru" class="radio3" type="radio" name="radio3" hidden/>
+					        <label for="i_lang_ru">Russian</label>
+					    </li>
+					    <li>
+					        <input id="i_lang_bl" class="radio3" type="radio" name="radio3" hidden/>
+					        <label for="i_lang_bl">Bulgarian</label>
+					    </li>
+					    <li>
+					        <input id="i_lang_sp" class="radio3" type="radio" name="radio3" hidden/>
+					        <label for="i_lang_sp">Spanish</label>
+					    </li>
+					</ul>
+
+					<h4>DIMENSIONS</h4>
+					<ul>
+						<li style="display: inline-block">
+					        <input id="I_dimens_vert" class="radio3" type="radio" name="radio4" checked hidden/>
+					        <label for="I_dimens_vert">Vertical</label>
+					    </li>
+					    <li style="display: inline-block">
+					        <input id="i_dimens_hor" class="radio3" type="radio" name="radio4" hidden/>
+					        <label for="i_dimens_hor">Horizontal</label>
+					    </li>
+					</ul>
+					<ul class="i_dimens_params">
+						<li>Width</li>
+						<li><input type="text" name="iframe_width"></li>
+						<li>Height</li>
+						<li><input type="text" name="iframe_height"> px</li>
+					</ul>
+
+					<h4>BORDER</h4>
+					<ul>
+						<li style="display: inline-block">
+					        <input id="I_brdr_yes" class="radio3" type="radio" name="radio5" checked hidden/>
+					        <label for="I_brdr_yes">Yes</label>
+					    </li>
+					    <li style="display: inline-block">
+					        <input id="i_brdr_no" class="radio3" type="radio" name="radio5" hidden/>
+					        <label for="i_brdr_no">No</label>
+					    </li>
+					</ul>
+
+					<h4>COLOURS</h4>
+						<table class="table3">
+							<tr>
+								<td style="width: 110px">Background</td>
+								<td>
+									<div class="colorSelector" id="colSelBg">
+										<div></div>
+									</div>
+								</td>
+								<td class="cp_bg">#ccc</td>
+							</tr>
+							<tr>
+								<td style="width: 110px">Website Title</td>
+								<td>
+									<div class="colorSelector" id="colSelWt">
+										<div></div>
+									</div>
+								</td>
+								<td class="cp_wt">#ccc</td>
+							</tr>
+							<tr>
+								<td style="width: 110px">Rating Graphs</td>
+								<td>
+									<div class="colorSelector" id="colSelRg">
+										<div></div>
+									</div>
+								</td>
+								<td class="cp_rg">#ccc</td>
+							</tr>
+							<tr>
+								<td style="width: 110px">Rating Title</td>
+								<td>
+									<div class="colorSelector" id="colSelRt">
+										<div></div>
+									</div>
+								</td>
+								<td class="cp_rt">#ccc</td>
+							</tr>
+						</table>
+
+					<p class="text11">
+						Do you also want the ratings of this page to play into your page; Select the ratings  that you want appear on 
+						your website (on the top of this page) and then copy the following code to your website.
+					</p>
+					<div class="both"></div>
+					<textarea class="iframe_code" disabled><iframe id="iframe_text_code" src="page-1.htm" name="test2" frameborder="0">&#10; You need a Frames Capable browser to view this content.</iframe></textarea>
+					<div class="both"></div>
+					<button class="btn3 left">Copy Code</button><button class="btn3 left">Preview Code</button><a href="#" class="link right">How to use code?</a>
+				</div>
+				
+				<div class="notice">
+					<div class="n_top">
+						<i class="n_error_icon"></i><div class="n_error_text">This website is already added</div><i class="n_close"></i>
+					</div>
+					<div class="n_content">
+						Do you want to add rating for this site?
+					</div>
+					<div class="n_bottom">
+						<span>Click</span><a href="#">here</a>
+					</div>
+				</div>
+		</section>	
+
+		<aside id="right-column">
+			<div id="add-site-btn">
+				<button class="add-site-btn">Add new Website</button><span class="add-icon"></span>
+			</div>
+			<div id="ad_block1">BANNER</div>
+			<div id="ad_block2">BANNER</div>
+			<div id="ad_block3">BANNER</div>
+			<div id="ad_block4">BANNER</div>
+		</aside>
+		<div class="both"></div>
+		<div id="search-results">
+			<div class="result-rows">
+				<ul>
+					<li><a href="#">exnet.gr</a></li>
+					<li><a href="#">exnet.gr</a></li>
+					<li><a href="#">exnet.gr</a></li>
+					<li><a href="#">exnet.gr</a></li>
+					<li><a href="#">exnet.gr</a></li>
+				</ul>
+			</div>
+			<div class="no-results">
+				<span>There is no such website. Do you want to add website?</span>
+				<span><a href="#">Add</a>new website</span>
+			</div>
+		</div>
+	</div>
+	<div class="both"></div>
+	
+
+	<footer id="footer" class="clearfix">
+		<div class="w1100">
+			<div class="f_blocks">
+				<div class="f_block">
+					<h3> Phasellus Purus <br>Adipiscing In</h3>
+					<ul>
+						<li><a href="#">Nullam "furniture"</a></li>
+						<li><a href="#">Contrast</a></li>
+						<li><a href="#">Press center</a></li>
+						<li><a href="#">Aenean suscipit</a></li>
+						<li><a href="#">Pellentesque</a></li>
+						<li><a href="#">Duis lobortis augue</a></li>
+						<li><a href="#">Mollis hendrerit</a></li>
+					</ul>
+				</div>
+				<div class="f_block">
+					<h3> Adipiscing In</h3>
+					<ul>
+						<li><a href="#">Nullam "furniture"</a></li>
+						<li><a href="#">Contrast</a></li>
+						<li><a href="#">Press center</a></li>
+						<li><a href="#">Aenean suscipit</a></li>
+						<li><a href="#">Pellentesque</a></li>
+						<li><a href="#">Duis lobortis augue</a></li>
+						<li><a href="#">Mollis hendrerit</a></li>
+						<li><a href="#">Nullam "furniture"</a></li>
+						<li><a href="#">Contrast</a></li>
+					</ul>
+				</div>
+				<div class="f_block">
+					<h3> Phasellus Purus </h3>
+					<ul>
+						<li><a href="#">Nullam "furniture"</a></li>
+						<li><a href="#">Contrast</a></li>
+						<li><a href="#">Press center</a></li>
+						<li><a href="#">Aenean suscipit</a></li>
+						<li><a href="#">Pellentesque</a></li>
+						<li><a href="#">Duis lobortis augue</a></li>
+						<li><a href="#">Mollis hendrerit</a></li>
+					</ul>
+				</div>
+				<div class="f_block f_contacts">
+					<h3>Contacts Us:</h3>
+					<input type="text" name="f_c_name" placeholder="Name"><input type="text" name="f_c_lname" placeholder="Last Name"><br>
+					<input type="text" name="f_c_email" placeholder="Email"><input type="text" name="f_c_phone" placeholder="Phone"><br>
+					<textarea name="f_c_message"  placeholder="Message"></textarea><br>
+					<div class="captha_img2"></div><input type="text" class="captha_text2"><button class="btn1" style="margin-top: 0">SEND</button>
+				</div>
+			</div>
+			<div class="both"></div>
+			
+		</div>
+	</footer>
+	<div id="f_bottom">
+		<div class="w1100">
+			<ul class="bottom_nav">
+				<li><a href="#">INDEX PAGE</a></li>
+				<li><a href="#">WHO WE ARE</a></li>
+				<li><a href="#">WHAT WE DO</a></li>
+				<li><a href="#">CONTACT US</a></li>
+			</ul>
+			<div class="right" >
+				<ul class="bottom_socials">
+					<li style="background-position: 0 -75px;"><a href="#"></a></li>
+					<li style="background-position: -33px -77px;"><a href="#"></a></li>
+					<li style="background-position: -73px -75px;"><a href="#"></a></li>
+					<li style="background-position: -108px -75px;"><a href="#"></a></li>
+					<li style="background-position: -146px -75px;"><a href="#"></a></li>
+					<li style="background-position: -187px -74px;"><a href="#"></a></li>
+				</ul>
+				<span class="copyright">© 2014 Exnet Hellas</span>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	$(document).ready(function(){
+		$('.web_rate_url a').click(function(e){
+			e.preventDefault();
+		});
+
+		$('.checkbox2').click(function(){
+				$(this).next('.checkbox_olay2').toggleClass(' checked2');
+		});	
+	})
+</script>
+</html>

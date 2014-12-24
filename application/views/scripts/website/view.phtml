@@ -1,0 +1,42 @@
+<section id="content">
+<?php echo $this->searchHtml()?>
+<script type="text/javascript" src="/js/site_rating.js"></script>
+<ul class="breadcrumbs">
+					<li>
+						Index
+					</li>
+					<li class="angle-right"></li>
+					<li>Website Rating</li>
+				</ul>
+
+				<div class="wrapper">
+					<div class="site_pr_head">
+						<h1><?php echo $this->result['name']?></h1><i class="site_nt site_nt_gr"></i>
+					</div>
+					<div class="both"></div>
+					<div class="site_pr_image">
+						<img alt="" src="<?php echo  'https://api.thumbalizr.com/?url=http://'.$this->result['url'].'&width=230'; ?>">
+					</div>
+					<div class="site_pr_desc">
+						<p>
+							<?php echo $this->result['description']?> <br>
+							<a href="#">Details</a>
+						</p>
+					</div>
+					<div class="site_circ_rating">
+						<canvas id="site_rating" width="165" height="165" data-completeness="0"></canvas> 
+					</div>
+					<div class="both"></div>
+				</div>
+
+</section>	
+
+		<aside id="right-column">
+			<div id="add-site-btn">
+				<button class="add-site-btn">Add new Website</button><span class="add-icon"></span>
+			</div>
+			<div id="ad_block1">BANNER</div>
+			<div id="ad_block2">BANNER</div>
+			<div id="ad_block3">BANNER</div>
+			<div id="ad_block4">BANNER</div>
+		</aside>

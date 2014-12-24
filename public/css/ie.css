@@ -1,0 +1,65 @@
+@font-face {
+	src: url(../fonts/os.eot);
+	font-family: os;
+}
+@font-face {
+	src: url(../fonts/os-bold.eot);
+	font-family: os_bold;
+}
+@font-face {
+	src: url(../fonts/os_r.eot);
+	font-family: os_r;
+}
+@font-face {
+	src: url(../fonts/os_s.eot);
+	font-family: os_s;
+}
+@font-face {
+	src: url(../fonts/mpr.eot);
+	font-family: mpr;
+}
+.both {
+	height: 0;
+}
+textarea { 
+	overflow: auto; 
+}
+#header {
+	margin-top: 0;
+}
+#footer {
+	margin-bottom: -10px;
+}
+.advantage {
+	float: left;
+}
+.search_field {
+	line-height: 43px;
+}
+.captha_text2 {
+	height: 30px;
+	line-height: 30px;
+}
+input.checkbox , input.radio {
+	display: none;
+}
+input[name="f_c_name"],[name="f_c_lname"],[name="f_c_email"],[name="f_c_phone"] {
+	height: 30px;
+	line-height: 30px;
+}
+input[type="password"] {
+	letter-spacing: 2px;
+}
+.form_input {
+	line-height: 45px;
+}
+#overlay1 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #222;
+	z-index: 99;
+	cursor: pointer;
+	display: none;
+	opacity: 0.7;
+}
